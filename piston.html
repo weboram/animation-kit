@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Piston</title>
+        <style>
+            .piston{
+                width: 100px;
+                height: 100px;
+                position: relative;
+            }
+
+            .couple1{
+                animation: jump 2s infinite;
+            }
+
+            .couple2{
+                animation: fall 2s infinite;
+            }
+
+            @keyframes fall {
+                0%, 100%{
+                    top: 0;
+                    border-radius: 0;
+                    background-color: blue;
+                }
+                50%{
+                    top: 100px;
+                    background-color: red;
+                    border-radius: 100px;
+                }
+            }
+
+            @keyframes jump {
+                0%, 100%{
+                    top: 100px;
+                    border-radius: 100px;
+                    background-color: red;
+                }
+                50%{
+                    top: 0;
+                    background-color: blue;
+                    border-radius: 0;
+                }
+            }
+
+            .row{
+                display: flex;
+                gap: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="row">
+            <div class="piston couple1"></div>
+            <div class="piston couple2"></div>
+            <div class="piston couple1"></div>
+            <div class="piston couple2"></div>
+        </div>
+    </body>
+</html>
